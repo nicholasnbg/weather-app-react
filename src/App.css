@@ -1,0 +1,43 @@
+.App {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template:
+    "currentDay stats"50fr "currentDay forecast"50fr / 33fr 67fr;
+}
+
+.currentDay {
+  grid-area: currentDay;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  padding: 30px 50px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: .5em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: .5em;
+  background: -moz-linear-gradient(45deg, rgba(255, 194, 38, 1) 0%, rgba(255, 194, 38, 1) 6%, rgba(227, 54, 204, 1) 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255, 194, 38, 1)), color-stop(6%, rgba(255, 194, 38, 1)), color-stop(100%, rgba(227, 54, 204, 1)));
+  /* safari4+,chrome */
+  background: -webkit-linear-gradient(45deg, rgba(255, 194, 38, 1) 0%, rgba(255, 194, 38, 1) 6%, rgba(227, 54, 204, 1) 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(45deg, rgba(255, 194, 38, 1) 0%, rgba(255, 194, 38, 1) 6%, rgba(227, 54, 204, 1) 100%);
+  /* opera 11.10+ */
+  background: -ms-linear-gradient(45deg, rgba(255, 194, 38, 1) 0%, rgba(255, 194, 38, 1) 6%, rgba(227, 54, 204, 1) 100%);
+  /* ie10+ */
+  background: linear-gradient(45deg, rgba(255, 194, 38, 1) 0%, rgba(255, 194, 38, 1) 6%, rgba(227, 54, 204, 1) 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E336CC', endColorstr='#FFC226', GradientType=1);
+  /* ie6-9 */
+}
+
+.spinner {
+  width: 200px;
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
