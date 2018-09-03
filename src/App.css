@@ -18,6 +18,23 @@
   border-top-right-radius: .5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: .5em;
+}
+
+.weatherStatsContainer {
+  grid-area: stats;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.spinner {
+  width: 200px;
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.gradbg {
   background: -moz-linear-gradient(45deg, rgba(255, 194, 38, 1) 0%, rgba(255, 194, 38, 1) 6%, rgba(227, 54, 204, 1) 100%);
   /* ff3.6+ */
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255, 194, 38, 1)), color-stop(6%, rgba(255, 194, 38, 1)), color-stop(100%, rgba(227, 54, 204, 1)));
@@ -32,17 +49,4 @@
   /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E336CC', endColorstr='#FFC226', GradientType=1);
   /* ie6-9 */
-}
-
-.weatherStatsContainer {
-  display: grid;
-  grid-template-rows: 1fr 4fr;
-}
-
-.spinner {
-  width: 200px;
-  display: block;
-  position: absolute;
-  top: 30%;
-  left: 40%;
 }

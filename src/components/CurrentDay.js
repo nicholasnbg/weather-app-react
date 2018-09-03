@@ -5,7 +5,7 @@ import moment from "moment";
 const CurrentDay = props => {
   const { data } = props;
   return (
-    <div className="currentDay">
+    <div className="currentDay gradbg">
       <CurrentDate>{moment(new Date()).format("MMMM Do YYYY")}</CurrentDate>
       <CurrentTemp>
         {data && Math.round(((data.currently.temperature - 32) * 5) / 9)} &deg;
