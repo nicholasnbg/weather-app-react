@@ -18,4 +18,13 @@ const convertMphToKph = mph => {
     return Math.round(mph * 1.61);
 }
 
-module.exports = { convertWind, convertToPercent, convertMphToKph }
+const fToCelcius = f => {
+    return Math.round((f - 32) * 5 / 9);
+}
+
+module.exports = {
+    convertWind,
+    convertToPercent,
+    fToCelcius,
+    convertMphToKph
+}

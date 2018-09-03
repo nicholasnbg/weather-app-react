@@ -3,7 +3,8 @@
   width: 100%;
   display: grid;
   grid-template:
-    "currentDay stats"50fr "currentDay forecast"50fr / 33fr 67fr;
+    "currentDay stats"40fr "currentDay forecast"60fr / 33fr 67fr;
+  overflow: hidden;
 }
 
 .currentDay {
@@ -23,6 +24,7 @@
 .weatherStatsContainer {
   grid-area: stats;
   display: grid;
+  max-height: 40vh;
   grid-template-rows: 1fr 4fr;
 }
 
