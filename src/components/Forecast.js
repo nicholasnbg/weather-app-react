@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import ForecastNav from "./ForecastNav";
 import HourlyForecast from "./HourlyForecast";
+import WeeklyForecast from "./WeeklyForecast";
 
 class Forecast extends Component {
   state = {
@@ -28,6 +29,7 @@ class Forecast extends Component {
       <ForecastContainer>
         <ForecastNav changeTab={this.changeTab} />
         <HourlyForecast data={this.props.data} visible={this.state.hourly} />
+        <WeeklyForecast data={this.props.data} visible={this.state.week} />
       </ForecastContainer>
     );
   }
