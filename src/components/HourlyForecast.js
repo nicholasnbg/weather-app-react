@@ -53,4 +53,8 @@ const HourlyWrapper = styled(Wrapper)`
   font-size: 1.5rem;
   overflow: hidden;
   opacity: 0;
+
+   @media (max-width: 750px){
+    font-size: 1rem;
+  }
 `;

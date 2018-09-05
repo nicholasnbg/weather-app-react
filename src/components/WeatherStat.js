@@ -18,4 +18,8 @@ const Stat = styled.div`
   font-size: 3rem;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 750px){
+    font-size: 2rem;
+  }
 `;

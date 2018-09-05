@@ -5,12 +5,12 @@ const WeeklyRow = (props) => {
     const { weekData } = props;
     return (
         <Row>
-            <p>{weekData.day}</p>
-            <p>{weekData.summary}</p>
-            <p>
+            <Small>{weekData.day}</Small>
+            <Summary>{weekData.summary}</Summary>
+            <Small>
                 {weekData.maxTemp}
                 &deg;
-      </p>
+      </Small>
         </Row>
     )
 }
@@ -21,3 +21,19 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
+const Summary = styled.p`
+  flex-grow: 2;  
+  text-align: center;
+   @media (max-width: 750px){
+    max-width: 48%;
+    
+  }
+`
+
+const Small = styled.p`
+width: 20%;
+&:nth-child(3){
+    text-align: right;
+}
+`

@@ -15,10 +15,7 @@
   justify-content: flex-end;
   color: white;
   padding: 30px 50px;
-  border-top-left-radius: 1em;
-  border-top-right-radius: .5em;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: .5em;
+  border-radius: 1em 0 0 1em;
 }
 
 .weatherStatsContainer {
@@ -57,7 +54,11 @@
 @media only screen and (max-width: 1000px) {
   body {
     height: auto;
-    font-size: 17px;
+    font-size: 1rem;
+  }
+
+  .currentDay {
+    border-radius: 1em 1em 0 0;
   }
 
   .App {
@@ -70,6 +71,7 @@
 
   .weatherStatsContainer {
     max-height: none;
+    grid-template-rows: 1fr 3fr;
   }
 
   .dayTemp {
