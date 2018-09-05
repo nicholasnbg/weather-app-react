@@ -25,14 +25,6 @@
   grid-template-rows: 1fr 4fr;
 }
 
-.spinner {
-  width: 200px;
-  display: block;
-  position: absolute;
-  top: 30%;
-  left: 40%;
-}
-
 .gradbg {
   background: -moz-linear-gradient(45deg, rgba(255, 194, 38, 1) 0%, rgba(255, 194, 38, 1) 6%, rgba(227, 54, 204, 1) 100%);
   /* ff3.6+ */
