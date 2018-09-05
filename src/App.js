@@ -26,7 +26,7 @@ class App extends Component {
         const { lat, long } = this.state.userLocation;
         axios(
           `${weatherApi.corsAnywhere}${weatherApi.call}${
-            weatherApi.key
+          weatherApi.key
           }${lat},${long}`
         ).then(res => {
           this.setState({
