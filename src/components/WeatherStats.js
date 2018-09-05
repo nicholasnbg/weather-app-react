@@ -8,7 +8,7 @@ const WeatherStats = (props) => {
     const stats = pullStats(data);
 
     return (
-        <div className="weatherStatsContainer">
+        <WeatherStatsContainer>
             <StatsHeading>Stats</StatsHeading>
             <StatsDisplay>
                 <WeatherStat icon={'rain'} stat={stats.rainChance} unit={'%'} />
@@ -17,7 +17,7 @@ const WeatherStats = (props) => {
                 <WeatherStat icon={'humidity'} stat={stats.humidity} unit={'%'} />
 
             </StatsDisplay>
-        </div>
+        </WeatherStatsContainer>
     )
 }
 
@@ -34,6 +34,17 @@ const pullStats = data => {
         rainChance, windDirText, windSpeed, humidity, icon
     }
 }
+
+const WeatherStatsContainer = styled.div`
+  grid-area: stats;
+  display: grid;
+  max-height: 40vh;
+  grid-template-rows: 1fr 4fr;
+  @media (max-width: 1000px){
+    max-height: none;
+    grid-template-rows: 1fr 3fr;
+  }
+`
 
 const StatsHeading = styled.h2`
     border-bottom: grey 1px solid;
