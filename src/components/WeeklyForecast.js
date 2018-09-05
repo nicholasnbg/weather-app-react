@@ -3,6 +3,7 @@ import styled from "styled-components";
 import posed from "react-pose";
 import moment from "moment";
 import { fToCelcius } from "../helpers";
+import WeeklyRow from "./WeeklyRow";
 
 class WeeklyForecast extends Component {
   render() {
@@ -10,13 +11,13 @@ class WeeklyForecast extends Component {
       return {
         day: moment(new Date(data.time * 1000)).format("dddd"),
         summary: data.summary,
-        maxTemp: fToCelcius(data.temperature)
+        maxTemp: fToCelcius(data.temperatureMax)
       };
     });
 
     return (
       <WeeklyWrapper pose={this.props.visible ? "visible" : "hidden"}>
-        test
+        {weeklyData.map((day, i) => <WeeklyRow key={i} weekData={day} />)}
       </WeeklyWrapper>
     );
   }
@@ -35,9 +36,8 @@ const Wrapper = posed.div({
     }
   },
   hidden: {
-    display: "none",
     opacity: 0,
-    y: "-100%",
+    y: "100%",
     transition: {
       opacity: { ease: "easeIn", duration: 300 },
       default: { ease: "easeIn", duration: 500 }
@@ -46,7 +46,11 @@ const Wrapper = posed.div({
 });
 
 const WeeklyWrapper = styled(Wrapper)`
+  grid-area: forecast;
   display: flex;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
   flex-direction: column;
   font-size: 1.5rem;
   overflow: hidden;

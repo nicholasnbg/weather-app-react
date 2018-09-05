@@ -47,7 +47,9 @@ const Wrapper = posed.div({
 
 const HourlyWrapper = styled(Wrapper)`
   display: flex;
+  grid-area: forecast;
   flex-direction: column;
+  justify-content: space-around;
   font-size: 1.5rem;
   overflow: hidden;
   opacity: 0;

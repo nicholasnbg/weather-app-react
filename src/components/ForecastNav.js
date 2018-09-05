@@ -40,7 +40,7 @@ class ForecastNav extends Component {
 export default ForecastNav;
 
 const NavWrapper = styled.nav`
-  margin-bottom: 25px;
+grid-area: nav;
   display: flex;
   width: 100%;
   border-bottom: grey 1px solid;

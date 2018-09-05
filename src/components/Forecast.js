@@ -38,9 +38,9 @@ class Forecast extends Component {
 export default Forecast;
 
 const ForecastContainer = styled.div`
-  grid-area: forecast;
+  grid-area: forecastArea;
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template: "nav"1fr "forecast"4fr / 1fr;
   width: 90%;
   margin-left: 5%;
 `;

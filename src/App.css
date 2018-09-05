@@ -3,7 +3,7 @@
   width: 100%;
   display: grid;
   grid-template:
-    "currentDay stats"40fr "currentDay forecast"60fr / 33fr 67fr;
+    "currentDay stats"40fr "currentDay forecastArea"60fr / 33fr 67fr;
   overflow: hidden;
 }
 
