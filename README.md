@@ -1,3 +1,5 @@
+[Live Demo](https://nifty-hoover-abb974.netlify.com/)
+
 # React Weather App
 This web app was built as a React-afied version of an old jQuery based project I completed whilst attaining the FreeCodeCamp Front End Certificate, which you can find [HERE](https://github.com/nicholasnbg/weather-app).
 
