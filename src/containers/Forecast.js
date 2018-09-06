@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import ForecastNav from "./ForecastNav";
-import HourlyForecast from "./HourlyForecast";
-import WeeklyForecast from "./WeeklyForecast";
+import ForecastNav from "../components/ForecastNav";
+import HourlyForecast from "../components/HourlyForecast";
+import WeeklyForecast from "../components/WeeklyForecast";
 
 class Forecast extends Component {
   state = {

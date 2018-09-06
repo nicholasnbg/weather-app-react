@@ -3,13 +3,13 @@ import styled from "styled-components";
 import posed from "react-pose";
 import moment from "moment";
 import { fToCelcius } from "../helpers";
-import HourlyRow from "./HourlyRow";
+import ForecastRow from './ForecastRow';
 
 class HourlyForecast extends Component {
   render() {
     const hourlyData = this.props.data.hourly.data.slice(1, 5).map(data => {
       return {
-        time: moment(new Date(data.time * 1000)).format("h:mm a"),
+        event: moment(new Date(data.time * 1000)).format("h:mm a"),
         summary: data.summary,
         maxTemp: fToCelcius(data.temperature)
       };
@@ -17,7 +17,7 @@ class HourlyForecast extends Component {
     return (
       <HourlyWrapper pose={this.props.visible ? "visible" : "hidden"}>
         {hourlyData.map((hour, i) => (
-          <HourlyRow key={i} hourData={hour} />
+          <ForecastRow key={i} data={hour} />
         ))}
       </HourlyWrapper>
     );

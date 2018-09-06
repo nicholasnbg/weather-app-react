@@ -5,7 +5,7 @@ import { getLocation, weatherApi } from "./weatherApi";
 import CurrentDay from "./components/CurrentDay";
 import Spinner from "./components/Spinner";
 import WeatherStats from "./components/WeatherStats";
-import Forecast from "./components/Forecast";
+import Forecast from "./containers/Forecast";
 
 class App extends Component {
   constructor() {

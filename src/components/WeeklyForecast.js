@@ -3,13 +3,13 @@ import styled from "styled-components";
 import posed from "react-pose";
 import moment from "moment";
 import { fToCelcius } from "../helpers";
-import WeeklyRow from "./WeeklyRow";
+import ForecastRow from './ForecastRow';
 
 class WeeklyForecast extends Component {
   render() {
     const weeklyData = this.props.data.daily.data.slice(1, 5).map(data => {
       return {
-        day: moment(new Date(data.time * 1000)).format("dddd"),
+        event: moment(new Date(data.time * 1000)).format("dddd"),
         summary: data.summary,
         maxTemp: fToCelcius(data.temperatureMax)
       };
@@ -17,7 +17,7 @@ class WeeklyForecast extends Component {
 
     return (
       <WeeklyWrapper pose={this.props.visible ? "visible" : "hidden"}>
-        {weeklyData.map((day, i) => <WeeklyRow key={i} weekData={day} />)}
+        {weeklyData.map((day, i) => <ForecastRow key={i} data={day} />)}
       </WeeklyWrapper>
     );
   }

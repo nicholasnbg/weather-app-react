@@ -15,7 +15,6 @@ const WeatherStats = (props) => {
                 <WeatherStat icon={'wind-direction'} stat={stats.windDirText} unit={''} />
                 <WeatherStat icon={'strong-wind'} stat={stats.windSpeed} unit={'km'} />
                 <WeatherStat icon={'humidity'} stat={stats.humidity} unit={'%'} />
-
             </StatsDisplay>
         </WeatherStatsContainer>
     )
@@ -29,7 +28,6 @@ const pullStats = data => {
     const windSpeed = convertMphToKph(data.currently.windSpeed);
     const humidity = convertToPercent(data.currently.humidity);
     const icon = data.currently.icon;
-
     return {
         rainChance, windDirText, windSpeed, humidity, icon
     }
