@@ -2,14 +2,24 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 class ForecastNav extends Component {
+  state = {
+    activeTabs: {
+      hourly: true,
+      week: false
+    }
+  }
+
+  componentWillReceiveProps = (newProps) => {
+    if (newProps.activeTabs) {
+      this.setState({
+        activeTabs: newProps.activeTabs
+      })
+    }
+  }
+
+
   handleClick = e => {
     this.props.changeTab(e.target.id);
-    const buttons = document.querySelectorAll(".forecastNav > ul > li");
-    buttons.forEach(button => {
-      button.classList.remove("gradbg");
-    });
-    const newActive = document.querySelector(`#${e.target.id}`);
-    newActive.classList.add("gradbg");
   };
 
   render() {
@@ -21,6 +31,7 @@ class ForecastNav extends Component {
             className={"gradbg"}
             value={"hourly"}
             onClick={e => this.handleClick(e)}
+            className={this.state.activeTabs.hourly ? "gradbg" : ""}
           >
             Today
           </NavButton>
@@ -28,6 +39,7 @@ class ForecastNav extends Component {
             id="week"
             value={"week"}
             onClick={e => this.handleClick(e)}
+            className={this.state.activeTabs.week ? "gradbg" : ""}
           >
             Week
           </NavButton>

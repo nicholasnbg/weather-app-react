@@ -11,23 +11,18 @@ class Forecast extends Component {
   };
 
   changeTab = value => {
-    this.setState(
-      {
-        hourly: false,
-        week: false
-      },
-      () => {
-        this.setState({
-          [value]: true
-        });
-      }
-    );
+    const tabs = {
+      hourly: false,
+      week: false
+    }
+    tabs[value] = true;
+    this.setState({ ...tabs });
   };
 
   render() {
     return (
       <ForecastContainer>
-        <ForecastNav changeTab={this.changeTab} />
+        <ForecastNav changeTab={this.changeTab} activeTabs={this.state} />
         <HourlyForecast data={this.props.data} visible={this.state.hourly} />
         <WeeklyForecast data={this.props.data} visible={this.state.week} />
       </ForecastContainer>
